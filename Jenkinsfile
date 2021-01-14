@@ -11,7 +11,6 @@ pipeline {
             steps {
                 sh 'npm cache clean -f'
                 sh 'sudo npm install --unsafe-perm=true --allow-root'
-'
             }
         }
 
