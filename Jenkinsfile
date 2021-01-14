@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm cache clean -f'
-                sh 'sudo npm install'
+                sh 'npm install'
             }
         }
 
