@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm cache clean -f'
-                sh "sudo chown root:jenkins /run/docker.sock"
+                sh "chmod +x -R ${env.WORKSPACE}"
                 sh 'npm install'
             }
         }
