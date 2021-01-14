@@ -10,7 +10,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm cache clean -f'
-                sh 'sudo npm install --unsafe-perm=true --allow-root'
+                sh "sudo chown root:jenkins /run/docker.sock"
+                sh 'npm install'
             }
         }
 
